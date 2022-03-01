@@ -1,0 +1,48 @@
+body{
+    background-image: url("img/background.jpeg");
+    background-size: 475px 470px;
+    background-repeat: no-repeat;
+    background-color: #242424;
+}
+
+
+#header{
+    text-align: center;
+}
+
+h1{
+    margin-top: 1em;
+    color: white;
+}
+
+.button-container{
+    display: flex;
+    margin-top: 10em;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.button{
+    background-color: #242424;
+    color: white;
+    outline: 0;
+    border: transparent;
+    width: 8rem;
+    height: 3rem;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #3a3a3a;
+}
+
+.lower{
+    margin-top: 13em;
+    text-align: left;
+}
+
+#spinner{
+    width: 1.5em;
+    height: 1.5em;
+    display: none;
+}
