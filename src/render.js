@@ -8,7 +8,7 @@ const buttonClose = document.getElementById('close');
 
 const spinner = document.getElementById('spinner')
 
-let interval;
+let interval = null;
 /*GLOBALS END*/
 
 /*Start or Stop program*/ 
