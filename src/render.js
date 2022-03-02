@@ -1,13 +1,15 @@
 import { robot } from 'robotjs';
 import { remote } from 'electron';
 
+/*GLOBALS START*/
 const buttonStart = document.getElementById('start');
 
 const buttonClose = document.getElementById('close');
 
 const spinner = document.getElementById('spinner')
 
-let timeOut;
+let interval;
+/*GLOBALS END*/
 
 /*Start or Stop program*/ 
 buttonStart.addEventListener('click', event => {
@@ -23,21 +25,18 @@ buttonStart.addEventListener('click', event => {
         stop();
     }
 });
-
 /*Close program*/
 buttonClose.addEventListener('click', event => {
     let w = remote.getCurrentWindow();
     w.close();
 });
-
 /*Timer for when next move will occur*/
-function start()
-{   
-     timeOut = setInterval(() => {
+async function start()
+{     
+    interval = setInterval(() => {
         move();
-    }, (Math.random() * (900 - 600)) + 600);
+    }, (Math.random() * (900000 - 600000)) + 600000);
 }
-
 /*Cursor moves and click*/ /*NOT DONE*/
 function move()
 {
@@ -54,5 +53,5 @@ function move()
 /*Stop program*/
 function stop()
 {
-    clearInterval(timeOut);
+    clearInterval(interval);
 }
